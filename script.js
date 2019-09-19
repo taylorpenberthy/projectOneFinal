@@ -8,6 +8,7 @@ var userScore = 0;
 function get(x) {
   return document.getElementById(x);
 }
+// Declare variables
 const openButton = get("open");
 const modal = get("modal");
 const close = get("close");
@@ -47,7 +48,7 @@ function initialize() {
   displayQuestion();
 }
 
-// Create a class called Question that will use the questions that I produce
+// Create a class called Question that will use the questions that I put in an array as instances
 class Question {
   constructor(text, choices, answer) {
     this.text = text;
@@ -161,8 +162,7 @@ function displayQuestion() {
     askQuestion.innerHTML = `Question ${currentQuestionIndex + 1} of ${
       questions.length
     }: `;
-    askQuestion.style.backgroundColor = '#F0D9DA';
-    askQuestion.style.color = '#383b38';
+    askQuestion.classList.add('questionChange');
     askQuestion.innerHTML += questions[currentQuestionIndex].text;
     displayChoices();
   }
@@ -204,6 +204,8 @@ function addScore(num) {
   score.innerText = userScore;
 }
 
+
+// Display overlay to show the result of the user's choice
 function showResult(outcome) {
   if (outcome == "win") {
     resultScreen.style.display = "block";
@@ -277,7 +279,6 @@ function moveBar(num) {
     elem.style.backgroundColor = "green";
     elem.style.color = "white";
   } else {
-    console.log(width);
     elem.style.width = width + "%";
     elem.innerHTML = width * 1 + "%";
   }
