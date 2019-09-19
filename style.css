@@ -1,0 +1,234 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(myImages/nycnight.jpg);
+    max-width: 100%;
+    height: auto;
+    background-repeat: none;
+    font-family: Lora, serif;
+  }
+  h1 {
+    font-family: "Shadows Into Light", cursive;
+    text-align: center;
+    color: #fff;
+    margin-top: 30%;
+    font-size: 80px;
+  }
+  h2 {
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    line-height: 120%;
+    font-style: oblique;
+  }
+  #myProgress {
+    width: 100%;
+    background-color: #778899;
+    margin-top: 10px;
+    display: none;
+  }
+  .progBarEnd {
+    background-color: green;
+    color: #fff;
+  }
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: #fff0f5;
+    text-align: center;
+    line-height: 30px;
+    color: #000;
+    padding-top: 10px;
+  }
+  #boxWithIcons {
+    float: right;
+    height: 70%;
+    width: 20%;
+    display: block;
+    border: 1px solid #fff;
+    position: fixed;
+    text-align: center;
+    z-index: 0;
+    margin-left: 0;
+    right: 30px;
+    top: 100px;
+    background-color: #596e79;
+    border-radius: 15px;
+    overflow: auto;
+  }
+  #countdown {
+    float: left;
+    padding-top: 5px;
+  }
+  #boxWithIcons:hover {
+    transform: rotateY(180deg);
+    transition: 2s;
+  }
+  h3 {
+    color: #fff;
+  }
+  #choices,
+  #hide,
+  #question,
+  h3 {
+    font-family: Raleway, sans-serif;
+  }
+  #question {
+    display: inline;
+    font-style: oblique;
+    border-radius: 30%;
+  }
+  #modal {
+    z-index: 2;
+    position: center;
+    height: 50%;
+    width: 50%;
+    overflow: auto;
+    display: none;
+  }
+  #textbox {
+    background-color: #fff;
+    box-shadow: 8px 5px 5px #eed3d5;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 70%;
+    width: 40%;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #465e6e;
+    padding: 40px;
+    line-height: 120%;
+    margin: auto;
+    font-family: Raleway, sans-serif;
+    color: #fff;
+  }
+  #modal-footer {
+    text-align: right;
+  }
+  .myButtons,
+  .readMore {
+    padding: 14px 18px;
+    background-color: #749eb2;
+    border: none;
+    outline: 0;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+  }
+  .startGame {
+    padding: 14px 18px;
+    background-color: #6cd989;
+    border: none;
+    outline: 0;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+  }
+  #start-game {
+    text-align: center;
+  }
+  #listChoices {
+    text-align: center;
+  }
+  .choice {
+    box-shadow: 8px 8px 8px 8px rgba(58, 38, 131, 0.2);
+    transition: 0.3s;
+    padding: 10px 16px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 15px;
+  }
+  .choice:hover {
+    background-color: #f0d9da;
+    color: grey;
+  }
+  #overlay {
+    pointer-events: all;
+    opacity: 0.9;
+    background-color:rgb(30, 31, 39);
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transition: all 250ms ease;
+    width: 100%;
+    color: #fff;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+  }
+  .winning {
+    background-color: #000;
+    color: #fff;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+  }
+  .center {
+    text-align: center;
+  }
+  #results {
+    display: none;
+    text-align: center;
+    margin-top: 60%;
+    margin-bottom: auto;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+  }
+  .displayResult {
+    display: block;
+  }
+  @-webkit-keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+    }
+    60% {
+      -webkit-transform: translateY(-20px);
+    }
+  }
+  @keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-20px);
+    }
+  }
+  .bounce {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+  }
+  .images {
+    float: left;
+    overflow: hidden;
+    overflow-wrap: normal;
+  }
+  .questionChange {
+    background-color: "#F0D9DA";
+    color: "#383b38";
+  }
+  .dontDisplay {
+    display: none;
+  }
+  

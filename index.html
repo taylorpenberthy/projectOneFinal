@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Taylor's Trivia</title>
+    <link rel="icon" href="myImages/T.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Chilanka|Cinzel:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Taylor's Trivia</h1>
+    <button class="myButtons" id="open">About the Game</button>
+    <div id="modal">
+        <div id="boxWithIcons">
+            <h3>Taylor in Icons</h3>
+            <div class="myImages">
+                <img src="myImages/nyc.jpg" alt="NYC" id="nyc" style="display: none; max-width: 50%; height: auto;">
+                <img src="myImages/wisco.jpg" alt="wisco" id="wisco" style="display: none; max-width: 50%; height: auto;">
+                <img src="myImages/healthcare-technology.jpg" alt="health" id="health" style="display: none; max-width: 50%; height: auto;">
+                <img src="myImages/frida.jpg" alt="frida" id="frida" style="display: none; max-width: 50%; height: auto;">
+                <img src="myImages/problem.jpg" alt="hardskill" id="problem" style="display: none; max-width: 50%; height: auto">
+                <img src="myImages/communication.jpg" alt="soft" id="softskill" style="display: none; max-width: 50%; height: auto">
+                <img src="myImages/kines.jpg" alt="kines" id="kines" style="display: none; max-width: 50%; height: auto">
+                <img src="myImages/franks.jpg" alt="franks" id="franks" style="display: none; max-width: 50%; height: auto">
+                <img src="myImages/bball.jpg" alt="basketball" id="bball" style="display: none; max-width: 50%; height: auto">
+                <img src="myImages/cookie.jpeg" alt="cookies" id="cookie" style="display: none; max-width: 50%; height: auto">
+            </div>
+        </div>
+        <div id="textbox">
+            <div id="overlay" style="display: none;">  
+                <div id="results"> </div>
+            </div>
+            <h2>Welcome to Taylor's Trivia!</h2>
+                <p id="question">This is a game that tests your knowledge of how well you know Taylor.</p>
+                <ul id="listChoices">
+                </ul>
+                <p id="choices">The game will prompt you for different questions, and you must pick the best answer for each question.  For each question you get right, you will get 10 points.</p>
+                <p id="hide">If you really know Taylor, you will score 100 points by the end of the game.  If you don't know Taylor, it will be apparent.  Maybe you can play again! </p>
+                <div id="start-game">
+                        <button class="startGame" value="Start Game"type="button" id="start" onclick="initialize()">Start Game</button>
+                </div>
+                <div id="modal-footer">
+                    <div id="myProgress">
+                        <div id="myBar"></div>
+                    </div>
+                    <div id="countdown"></div>
+                    <h3>Score: </h3>
+                    <p id="score">000</p>
+                    <button class="myButtons"id="close" href="#">Close</button>
+                </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
