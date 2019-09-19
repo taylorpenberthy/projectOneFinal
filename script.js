@@ -162,7 +162,7 @@ function displayQuestion() {
     askQuestion.innerHTML = `Question ${currentQuestionIndex + 1} of ${
       questions.length
     }: `;
-    askQuestion.classList.add('questionChange');
+    askQuestion.classList.add("questionChange");
     askQuestion.innerHTML += questions[currentQuestionIndex].text;
     displayChoices();
   }

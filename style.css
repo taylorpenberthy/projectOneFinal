@@ -225,8 +225,8 @@ body {
     overflow-wrap: normal;
   }
   .questionChange {
-    background-color: "#F0D9DA";
-    color: "#383b38";
+    background-color: #F0D9DA;
+    color: #383b38;
   }
   .dontDisplay {
     display: none;
