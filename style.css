@@ -232,3 +232,33 @@ body {
     display: none;
   }
   
+  @media(max-width: 600px) {
+    #textbox {
+        max-width: 30%;
+        position: absolute;
+        padding: 10px;
+    }
+    p {
+        font-size: 10px;
+    }
+    .startGame {
+        padding: 7px 9px;
+    }
+    .myButtons {
+        padding: 7px 9px;
+        margin: auto;
+    }
+    h1 {
+        margin-top: 0;
+        font-size: 40px;
+    }
+    .choice {
+        padding: 5px 8px;
+        display: block;
+        margin: auto;
+    }
+    ul {
+        margin: 0 auto;
+        padding: 0;
+    }
+  }
