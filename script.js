@@ -4,7 +4,7 @@ var currentQuestionIndex;
 var correct = 0;
 var question, choice, choices;
 var userScore = 0;
-// Create an array of the user's selection to check against the correct choice
+
 function get(x) {
   return document.getElementById(x);
 }
@@ -12,17 +12,16 @@ function get(x) {
 const openButton = get("open");
 const modal = get("modal");
 const close = get("close");
-var askQuestion = get("question");
-var getChoices = get("choices");
+const askQuestion = get("question");
+const getChoices = get("choices");
 const listChoices = get("listChoices");
 const score = get("score");
 const resultScreen = get("overlay");
 const results = get("results");
-var textbox = get("textbox");
+const textbox = get("textbox");
 const iconBox = get("boxWithIcons");
 const progBar = get("myProgress");
 const timer = get('countdown');
-
 
 const openBox = () => {
   modal.style.display = "block";
@@ -38,6 +37,7 @@ close.addEventListener("click", closeBox);
 
 const startBtn = get("start");
 const hideP = get("hide");
+
 function initialize() {
   clearChoices();
   startTimer();
@@ -204,7 +204,6 @@ function addScore(num) {
   score.innerText = userScore;
 }
 
-
 // Display overlay to show the result of the user's choice
 function showResult(outcome) {
   if (outcome == "win") {
@@ -283,7 +282,6 @@ function moveBar(num) {
     elem.innerHTML = width * 1 + "%";
   }
 }
-
 
 function startTimer() {
   var timeLeft = 60;
