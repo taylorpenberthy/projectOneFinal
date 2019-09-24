@@ -1,14 +1,17 @@
 // Trivia Game
 // Sources: https://css-tricks.com/restart-css-animation/
+// HC: please use let instead of var: https://tylermcginnis.com/var-let-const/
 var currentQuestionIndex;
 var correct = 0;
 var question, choice, choices;
 var userScore = 0;
 
+// HC: Consider using a descriptive argument name instead of x
 function get(x) {
   return document.getElementById(x);
 }
 // Declare variables
+// HC: I really like the get() helper method you’ve created to simplify the code!
 const openButton = get("open");
 const modal = get("modal");
 const close = get("close");
@@ -21,14 +24,14 @@ const results = get("results");
 const textbox = get("textbox");
 const iconBox = get("boxWithIcons");
 const progBar = get("myProgress");
-const timer = get('countdown');
+const timer = get("countdown");
 
 const openBox = () => {
   modal.style.display = "block";
 };
 
 const closeBox = () => {
-    document.location.href = '';
+  document.location.href = "";
   modal.style.display = "none";
 };
 
@@ -38,6 +41,7 @@ close.addEventListener("click", closeBox);
 const startBtn = get("start");
 const hideP = get("hide");
 
+// HC: Encapsulating the logic for initializing your game inside a function is a great technique to make your code easy to understand! Good job.
 function initialize() {
   clearChoices();
   startTimer();
@@ -57,6 +61,7 @@ class Question {
   }
 }
 
+// HC: consider moving these questions into a separate json file
 var questions = [
   new Question(
     "Where is Taylor from?",
@@ -219,7 +224,7 @@ function showResult(outcome) {
     results.style.display = "block";
     results.innerHTML = `Sorry, that is incorrect.  The correct answer is ${correctAnswer(
       currentQuestionIndex
-    )}. Click anywhere to continute`;
+    )}. Click anywhere to continute`; // HC: typo here
   }
 }
 
@@ -234,7 +239,7 @@ resultScreen.addEventListener("click", function(e) {
 });
 
 function endGame() {
-  timer.style.display = 'none';
+  timer.style.display = "none";
   getChoices.style.display = "none";
   hideP.style.display = "none";
   listChoices.style.display = "none";
@@ -262,8 +267,7 @@ function readMoreAboutTaylor() {
   askQuestion.appendChild(readHereBtn);
   readHereBtn.addEventListener("click", function(e) {
     e.preventDefault();
-    document.location.href =
-      "https://www.linkedin.com/in/taylorpenberthy";
+    document.location.href = "https://www.linkedin.com/in/taylorpenberthy";
   });
 }
 
@@ -295,4 +299,3 @@ function startTimer() {
     }
   }, 1000);
 }
-
